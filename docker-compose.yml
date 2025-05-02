@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+    volumes:
+      - ./backend/sample_docs:/app/sample_docs
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
